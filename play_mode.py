@@ -29,8 +29,12 @@ def init():
     #boy = Boy()
     #game_world.add_object(boy, 1)
 
-    bird =Bird()
-    game_world.add_object(bird, 1)
+    birds = []  # 새 리스트 초기화
+    for i in range(10):  # 10번 반복
+        bird = Bird()
+        bird.x += i*50
+        game_world.add_object(bird, 1)
+        birds.append(bird)
 
 
 def finish():

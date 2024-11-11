@@ -4,7 +4,7 @@ import game_world
 import game_framework
 
 PIXEL_PER_METER = (10.0 / 0.3)
-RUN_SPEED_KMPH = 10.0
+RUN_SPEED_KMPH = 5.0
 RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
 RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
 RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -34,7 +34,7 @@ class Idle:
 
     @staticmethod
     def do(bird):
-        bird.frame = (bird.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 5
+        bird.frame = (bird.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 4
 
     @staticmethod
     def draw(bird):
